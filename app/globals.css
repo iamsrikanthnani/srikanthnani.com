@@ -37,7 +37,7 @@ body {
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 99;
+  z-index: 99999999;
   background-color: #141516;
   svg {
     position: absolute;

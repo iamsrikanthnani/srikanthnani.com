@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Preloader } from "@/components";
+import { Hero, Preloader } from "@/components";
 
 export default function Home() {
   // State to track loading status
@@ -34,7 +34,8 @@ export default function Home() {
         {/* Show preloader if loading */}
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <h1>Home</h1> {/* Main content */}
+      {/* Hero section */}
+      <Hero />
     </div>
   );
 }

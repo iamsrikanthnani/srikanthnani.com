@@ -50,3 +50,22 @@ body {
     padding: 20px;
   }
 }
+
+.hero-slider {
+  position: relative;
+  white-space: nowrap;
+}
+
+.hero-slider p {
+  position: relative;
+  margin: 0px;
+  font-size: 130px;
+  font-weight: 500;
+  padding-right: 50px;
+}
+
+.hero-slider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+}

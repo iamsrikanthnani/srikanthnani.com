@@ -29,8 +29,24 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { slideUp } from "../Preloader/anim";
 import Background from "./Background";
-import { HeroSlider1, HeroSlider2, HeroTitle1, HeroTitle2 } from "@/data";
-
+import {
+  HeroSlider1,
+  HeroSlider2,
+  HeroTitle1,
+  HeroTitle2,
+  SocialLinks,
+} from "@/data";
+import Link from "next/link";
+import HoverAnimContainer from "../HoverAnimContainer";
+import {
+  CodeIcon,
+  DiscordLogoIcon,
+  EnvelopeClosedIcon,
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+  VideoIcon,
+} from "@radix-ui/react-icons";
 const Hero = () => {
   const firstText = useRef(null); // Ref for first text element
   const secondText = useRef(null); // Ref for second text element
@@ -68,6 +84,30 @@ const Hero = () => {
     gsap.set(secondText.current, { xPercent: xPercent }); // Set x percent for second text
     requestAnimationFrame(animate); // Request animation frame for continuous animation
     xPercent += 0.1 * direction; // Update x percent based on direction
+  };
+
+  // Function to get the corresponding icon for a given social media URL
+  const getSocialIcon = (url: string) => {
+    switch (true) {
+      case url.includes("srikanthnani.com"):
+        return <CodeIcon color="#fff" width={24} height={24} />;
+      case url.includes("twitter"):
+        return <TwitterLogoIcon color="#fff" width={24} height={24} />;
+      case url.includes("github"):
+        return <GitHubLogoIcon color="#fff" width={24} height={24} />;
+      case url.includes("linkedin"):
+        return <LinkedInLogoIcon color="#fff" width={24} height={24} />;
+      case url.includes("discord"):
+        return <DiscordLogoIcon color="#fff" width={24} height={24} />;
+      case url.includes("youtube"):
+        return <VideoIcon color="#fff" width={24} height={24} />;
+      case url.startsWith("mailto:"):
+        return <EnvelopeClosedIcon color="#fff" width={24} height={24} />;
+
+      default:
+        // If no matching social media found, return null or handle accordingly
+        return null;
+    }
   };
 
   return (
@@ -111,6 +151,17 @@ const Hero = () => {
             </div>
           </div>
         </motion.main>
+      </div>
+      {/* social links */}
+      <div className="absolute top-12 right-12 z-[99999]">
+        <div className="flex gap-4 justify-center items-center flex-wrap">
+          {/* Map through SocialLinks array and render respective icons */}
+          {SocialLinks.map((link, index) => (
+            <Link href={link} target="_blank" key={index}>
+              <HoverAnimContainer>{getSocialIcon(link)}</HoverAnimContainer>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

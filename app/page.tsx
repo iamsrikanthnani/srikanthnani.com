@@ -1,7 +1,14 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { About, Hero, Preloader, Projects, Skills } from "@/components";
+import {
+  About,
+  Contact,
+  Hero,
+  Preloader,
+  Projects,
+  Skills,
+} from "@/components";
 
 export default function Home() {
   // State to track loading status
@@ -42,6 +49,8 @@ export default function Home() {
       <Skills />
       {/* Projects section */}
       <Projects />
+      {/* Contact section */}
+      <Contact />
     </div>
   );
 }

@@ -25,6 +25,10 @@ body {
   font-family: "Comfortaa", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .preloader {
   height: 100vh;
   width: 100vw;
@@ -68,4 +72,23 @@ body {
   position: absolute;
   left: 100%;
   bottom: 0;
+}
+
+.about-main {
+  display: flex;
+  color: rgb(211, 211, 211);
+}
+
+.about-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-body p {
+  margin-right: 0.5vw;
+  font-weight: 700;
+}
+
+.about-body span {
+  opacity: 0.2;
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,18 +17,36 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  font-family: "Comfortaa", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+body {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.preloader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #141516;
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+    path {
+      fill: #141516;
+    }
+  }
+  p {
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
   }
 }

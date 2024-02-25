@@ -48,5 +48,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries or suggestions, feel free to reach out to me at [srikanthnani.com](https://srikanthnani.com)
 
+<a href="https://www.buymeacoffee.com/iamsrikanthnani" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## Happy Coding! 🚀
 

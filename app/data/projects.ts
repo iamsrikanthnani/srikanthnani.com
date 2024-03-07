@@ -2,6 +2,14 @@ export const ProjectsTitle = "Explore Projects 🌟";
 export const ProjectsEndText = "More to come! 🎈";
 export const ProjectsList = [
   {
+    name: "SaaS Boilerplate",
+    description:
+      "Revolutionize your SaaS development process with the SaaS Boilerplate. Built on Next.js 14, Clerk, and MongoDB, this boilerplate accelerates your development journey.",
+    link: "https://saas-boilerplate.srikanthnani.com/",
+    git: "https://github.com/iamsrikanthnani/saas-boilerplate",
+    img: "/img/saas-app.png",
+  },
+  {
     name: "Shift2App",
     description:
       "Say goodbye to time-consuming development. Convert your web app into native Android and iOS apps with React-Native. Streamline deployment and expand your user base effortlessly.",

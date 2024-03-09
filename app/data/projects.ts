@@ -5,8 +5,8 @@ export const ProjectsList = [
     name: "SaaS Boilerplate",
     description:
       "Revolutionize your SaaS development process with the SaaS Boilerplate. Built on Next.js 14, Clerk, and MongoDB, this boilerplate accelerates your development journey.",
-    link: "https://saas-boilerplate.srikanthnani.com/",
-    git: "https://github.com/iamsrikanthnani/saas-boilerplate",
+    link: "https://saas-app.srikanthnani.com/",
+    git: "https://github.com/iamsrikanthnani/saas-app",
     img: "/img/saas-app.png",
   },
   {

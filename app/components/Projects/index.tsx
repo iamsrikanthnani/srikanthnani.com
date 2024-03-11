@@ -39,7 +39,7 @@ const Projects = () => {
       {/* desktop view */}
       <section
         ref={targetRef}
-        className="hidden md:block lg:block relative h-[300vh] bg-[#141516]"
+        className="hidden md:block lg:block relative h-[300vh] bg-[#020202]"
       >
         <p
           className="font-bold text-5xl sm:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none pl-14 pt-8"

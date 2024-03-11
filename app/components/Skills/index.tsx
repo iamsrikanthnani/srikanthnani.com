@@ -39,13 +39,9 @@ const Skills = () => {
   const y = useTransform(scrollYProgress, [0, 1], [-250, 0]);
 
   return (
-    <motion.div
-      style={{ y }}
-      ref={container}
-      className="flex bg-black pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8"
-    >
-      <div className="flex flex-col items-center gap-4">
-        <p className="place-self-start	 text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
+    <div className="flex bg-black pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 mt-[-40px]">
+      <div className="flex flex-col items-center gap-4 pt-16">
+        <p className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
           Skills👇
         </p>
         {/* Map through skills list and render each skill */}
@@ -54,13 +50,13 @@ const Skills = () => {
             <HoverAnimContainer key={`skill-${index}`}>
               <img
                 src={skill}
-                className="w-24 h-24 sm:w-24 sm:h-24 lg:w-36 lg:h-36"
+                className="w-20 h-20 sm:w-20 sm:h-20 lg:w-32 lg:h-32"
               />
             </HoverAnimContainer>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

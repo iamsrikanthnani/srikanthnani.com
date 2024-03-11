@@ -83,10 +83,10 @@ const About = () => {
   return (
     <div
       ref={container}
-      className="flex about-main h-screen w-screen bg-black justify-center items-center px-8 sm:px-8 lg:px-36"
+      className="flex about-main h-screen w-screen bg-[#020202] justify-center items-center px-8 sm:px-8 lg:px-36 mt-[-120px]"
     >
-      <div className="flex flex-col items-center gap-5">
-        <p className="place-self-start	 text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
+      <div className="flex flex-col items-center gap-5 mt-[100px]">
+        <p className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
           About me👇
         </p>
         {/* Display about content with animated letters */}

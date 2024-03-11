@@ -4,7 +4,9 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import SocialLinks from "./SocialLinks";
 import HoverAnimContainer from "./HoverAnimContainer";
+import Cursor from "./Cursor";
 export * from "./AnimCard";
 
 export {
@@ -15,4 +17,6 @@ export {
   Skills,
   Projects,
   Contact,
+  SocialLinks,
+  Cursor,
 };

@@ -8,6 +8,8 @@ import {
   Preloader,
   Projects,
   Skills,
+  SocialLinks,
+  Cursor,
 } from "@/components";
 
 export default function Home() {
@@ -49,8 +51,12 @@ export default function Home() {
       <Skills />
       {/* Projects section */}
       <Projects />
+      {/* Social links section */}
+      <SocialLinks />
       {/* Contact section */}
       <Contact />
+      {/* cursor */}
+      <Cursor />
     </div>
   );
 }

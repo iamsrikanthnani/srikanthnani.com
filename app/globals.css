@@ -93,3 +93,12 @@ body {
 .about-body span {
   opacity: 0.2;
 }
+
+.cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border-radius: 25px;
+  pointer-events: none;
+  z-index: 9999;
+}

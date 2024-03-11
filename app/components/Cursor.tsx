@@ -15,14 +15,16 @@ const Cursor = () => {
   }, []);
 
   return (
-    <motion.div
-      className={"cursor bg-gradient-to-b from-green-400 to-blue-500  "}
-      animate={{
-        left: cursorPosition.x,
-        top: cursorPosition.y,
-      }}
-      transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
-    ></motion.div>
+    <div className="hidden md:block lg:block ">
+      <motion.div
+        className={"cursor bg-gradient-to-b from-green-400 to-blue-500  "}
+        animate={{
+          left: cursorPosition.x,
+          top: cursorPosition.y,
+        }}
+        transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+      ></motion.div>
+    </div>
   );
 };
 

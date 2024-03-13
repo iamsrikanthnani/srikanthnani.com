@@ -9,7 +9,7 @@ const Card = ({ card, index }: any) => {
       {/* Container for the card */}
       <CardContainer className="inter-var">
         {/* Body of the card */}
-        <CardBody className="bg-black relative group/card hover:shadow-2xl hover:shadow-green-500/[0.1] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardBody className="bg-black relative group/card hover:shadow-2xl hover:shadow-blue-500/[0.3] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
           {/* Title of the card */}
           <CardItem translateZ="50" className="text-xl font-bold text-white">
             {card?.name}

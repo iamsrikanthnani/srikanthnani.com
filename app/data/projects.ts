@@ -1,4 +1,6 @@
-export const ProjectsTitle = "Explore Projects 🌟";
+export const ProjectsTitle = "Open Source 🌟";
+export const ProjectsDescription =
+  "Discover my curated collection of open source projects. Explore innovative web and mobile solutions showcasing my passion for development.";
 export const ProjectsEndText = "More to come! 🎈";
 export const ProjectsList = [
   {

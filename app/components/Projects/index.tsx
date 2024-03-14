@@ -40,7 +40,7 @@ const Projects = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
 
   return (
-    <div className="w-screen  ">
+    <div id="projects" className="w-screen  ">
       {/* desktop view */}
       <section
         ref={targetRef}
@@ -49,7 +49,7 @@ const Projects = () => {
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           {/* Map through projects list and render each project card */}
           <motion.div style={{ x }} className="flex gap-8 items-center">
-            <div className="w-[500px] pl-20">
+            <div className="w-[500px] pl-[3rem]">
               <p className="text-left font-bold text-5xl sm:text-5xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
                 {ProjectsTitle}
               </p>

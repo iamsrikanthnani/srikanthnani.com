@@ -10,6 +10,7 @@ import {
   Skills,
   SocialLinks,
   Cursor,
+  Experience,
 } from "@/components";
 
 export default function Home() {
@@ -47,6 +48,8 @@ export default function Home() {
       <Hero />
       {/* About section */}
       <About />
+      {/* Experience section */}
+      <Experience />
       {/* Skills section */}
       <Skills />
       {/* Projects section */}

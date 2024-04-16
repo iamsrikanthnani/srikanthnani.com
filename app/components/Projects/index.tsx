@@ -37,7 +37,7 @@ const Projects = () => {
   });
 
   // Transform x position based on scroll progress
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-84%"]);
 
   return (
     <div id="projects" className="w-screen  ">

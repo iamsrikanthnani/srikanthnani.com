@@ -4,6 +4,14 @@ export const ProjectsDescription =
 export const ProjectsEndText = "More to come! 🎈";
 export const ProjectsList = [
   {
+    name: "Cat Adoption",
+    description:
+      "Full-stack Cat Adoption Application developed using NestJS for the backend and Vite React for the frontend. The application allows users to register, login, and manage cat profiles.",
+    link: "https://github.com/iamsrikanthnani/cat-adoption",
+    git: "https://github.com/iamsrikanthnani/cat-adoption",
+    img: "/img/cat-adoption.png",
+  },
+  {
     name: "SaaS Boilerplate",
     description:
       "Revolutionize your SaaS development process with the SaaS Boilerplate. Built on Next.js 14, Clerk, and MongoDB, this boilerplate accelerates your development journey.",

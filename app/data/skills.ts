@@ -6,9 +6,9 @@ export const SkillsList = [
   "/img/logos/swift.png",
   "/img/logos/kotlin.png",
   "/img/logos/tailwind.png",
-  "/img/logos/python.png",
   "/img/logos/nodejs.png",
+  "/img/logos/nestjs.png",
   "/img/logos/mongo-db.png",
-  "/img/logos/golang.png",
+  "/img/logos/python.png",
   "/img/logos/git.png",
 ];

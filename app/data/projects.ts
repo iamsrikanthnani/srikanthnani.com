@@ -4,6 +4,14 @@ export const ProjectsDescription =
 export const ProjectsEndText = "More to come! 🎈";
 export const ProjectsList = [
   {
+    name: "Speak Verse",
+    description:
+      "SpeakVerse combines Deepgram for speech-to-text, ElevenLabs for realistic voice, and OpenAI's GPT-4o for real-time, human-like conversations.",
+    link: "https://github.com/iamsrikanthnani/SpeakVerse",
+    git: "https://github.com/iamsrikanthnani/SpeakVerse",
+    img: "/img/speak-verse.png",
+  },
+  {
     name: "Cat Adoption",
     description:
       "Full-stack Cat Adoption Application developed using NestJS for the backend and Vite React for the frontend. The application allows users to register, login, and manage cat profiles.",

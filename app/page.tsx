@@ -11,6 +11,7 @@ import {
   SocialLinks,
   Cursor,
   Experience,
+  Products,
 } from "@/components";
 
 export default function Home() {
@@ -54,6 +55,8 @@ export default function Home() {
       <Skills />
       {/* Projects section */}
       <Projects />
+      {/* Products section */}
+      <Products />
       {/* Social links section */}
       <SocialLinks />
       {/* Contact section */}

@@ -8,6 +8,7 @@ import Experience from "./Experience";
 import SocialLinks from "./SocialLinks";
 import HoverAnimContainer from "./HoverAnimContainer";
 import Cursor from "./Cursor";
+import Products from "./Products";
 export * from "./AnimCard";
 
 export {
@@ -21,4 +22,5 @@ export {
   SocialLinks,
   Cursor,
   Experience,
+  Products,
 };

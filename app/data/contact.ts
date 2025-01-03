@@ -1,5 +1,3 @@
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-
 export const ContactTitle = "Let's collaborate 🚀";
 export const ContactCaption =
   "Reach out for opportunities or just a friendly chat.";

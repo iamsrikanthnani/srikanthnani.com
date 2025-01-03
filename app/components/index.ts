@@ -8,9 +8,11 @@ import Experience from "./Experience";
 import SocialLinks from "./SocialLinks";
 import HoverAnimContainer from "./HoverAnimContainer";
 import Cursor from "./Cursor";
+import Contributions from "./Contributions";
 export * from "./AnimCard";
 
 export {
+  Contributions,
   Preloader,
   Hero,
   About,

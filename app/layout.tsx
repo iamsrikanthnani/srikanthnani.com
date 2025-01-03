@@ -67,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={comfortaa.className}>
+      <body className={`${comfortaa.className} bg-black`}>
         {children}
         <Analytics />
         <SpeedInsights />

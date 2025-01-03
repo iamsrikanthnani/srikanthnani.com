@@ -131,7 +131,7 @@ const Hero = () => {
         </p>
         <img
           alt="srikanthnani visitors badge"
-          className="w-24 h-6 self-center mt-2"
+          className="self-center mt-2"
           src={
             "https://visitor-badge.laobi.icu/badge?page_id=iamsrikanthnani.iamsrikanthnani"
           }

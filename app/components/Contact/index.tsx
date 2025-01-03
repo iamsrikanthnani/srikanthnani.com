@@ -42,15 +42,15 @@ const Contact = () => {
         "h-[50vh] flex flex-col bg-[#020202] pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 justify-center items-center"
       }
     >
-      <div className={"flex flex-col items-center justify-center"}>
+      <div className={"flex flex-col items-center gap-2 justify-center"}>
         <p
-          className="font-bold text-2xl sm:text-2xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
+          className="font-bold text-xl sm:text-xl lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
           style={{ textAlign: "center" }}
         >
           {ContactTitle}
         </p>
         <p
-          className="font-bold text-xl sm:text-xl lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
+          className="font-bold text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
           style={{ textAlign: "center" }}
         >
           {ContactCaption}

@@ -4,6 +4,14 @@ export const ProjectsDescription =
 export const ProjectsEndText = "More to come! 🎈";
 export const ProjectsList = [
   {
+    name: "Express-trpc-react-turbo starter",
+    description:
+      "This repository provides a robust setup for developing a full-stack application using React, Vite, Express, and tRPC.",
+    link: "https://github.com/iamsrikanthnani/react-trpc-express-turbo",
+    git: "https://github.com/iamsrikanthnani/react-trpc-express-turbo",
+    img: "/img/react-trpc-turbo.png",
+  },
+  {
     name: "Speak Verse",
     description:
       "SpeakVerse combines Deepgram for speech-to-text, ElevenLabs for realistic voice, and OpenAI's GPT-4o for real-time, human-like conversations.",

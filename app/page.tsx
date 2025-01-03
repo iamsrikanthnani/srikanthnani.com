@@ -1,6 +1,3 @@
-"use client";
-import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
 import {
   About,
   Contact,
@@ -11,8 +8,8 @@ import {
   SocialLinks,
   Cursor,
   Experience,
+  Contributions,
 } from "@/components";
-
 export default function Home() {
   // // State to track loading status
   // const [isLoading, setIsLoading] = useState(true);
@@ -38,7 +35,7 @@ export default function Home() {
 
   // Render the component
   return (
-    <div className="h-screen w-screen" style={{ backgroundColor: "#0c0c0c" }}>
+    <div className="h-screen w-screen">
       {/* Animate presence to manage animations */}
       {/* <AnimatePresence mode="wait"> */}
       {/* Show preloader if loading */}
@@ -48,10 +45,14 @@ export default function Home() {
       <Hero />
       {/* About section */}
       <About />
-      {/* Experience section */}
-      <Experience />
       {/* Skills section */}
       <Skills />
+      {/* Contributions section */}
+      <Contributions />
+
+      {/* Experience section */}
+      <Experience />
+
       {/* Projects section */}
       <Projects />
       {/* Social links section */}

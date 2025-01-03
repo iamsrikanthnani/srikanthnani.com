@@ -25,8 +25,8 @@ const Experience = () => {
       </p>
 
       {ExperienceList.map((item, index) => (
-        <div className="w-full ">
-          <HoverAnimContainer key={`skill-${index}`}>
+        <div className="w-full " key={`skill-${index}`}>
+          <HoverAnimContainer>
             <div
               key={index}
               className="flex py-12 sm:py-12 md:py-10 px-8 sm:px-8 md:px-16 justify-between"

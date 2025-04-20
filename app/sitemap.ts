@@ -22,8 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Map social links to sitemap entries
-  const socialUrls = SocialLinks.map((link) => ({
+  // Map social links to sitemap entries, excluding email addresses
+  const socialUrls = SocialLinks.filter(
+    (link) => !link.startsWith("mailto:")
+  ).map((link) => ({
     url: link,
     lastModified: new Date(),
     changeFrequency: "weekly" as ChangeFrequency,

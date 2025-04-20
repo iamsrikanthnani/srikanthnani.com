@@ -40,7 +40,6 @@ import Link from "next/link";
 import HoverAnimContainer from "../HoverAnimContainer";
 import {
   CodeIcon,
-  DiscordLogoIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -80,8 +79,8 @@ const Hero = () => {
       // Reset x percent if above 0
       xPercent = -100;
     }
-    gsap.set(firstText.current, { xPercent: xPercent }); // Set x percent for first text
-    gsap.set(secondText.current, { xPercent: xPercent }); // Set x percent for second text
+    gsap.set(firstText?.current, { xPercent: xPercent }); // Set x percent for first text
+    gsap.set(secondText?.current, { xPercent: xPercent }); // Set x percent for second text
     requestAnimationFrame(animate); // Request animation frame for continuous animation
     xPercent += 0.1 * direction; // Update x percent based on direction
   };
@@ -97,8 +96,6 @@ const Hero = () => {
         return <GitHubLogoIcon color="#fff" width={24} height={24} />;
       case url.includes("linkedin"):
         return <LinkedInLogoIcon color="#fff" width={24} height={24} />;
-      case url.includes("discord"):
-        return <DiscordLogoIcon color="#fff" width={24} height={24} />;
       case url.includes("youtube"):
         return <VideoIcon color="#fff" width={24} height={24} />;
       case url.startsWith("mailto:"):

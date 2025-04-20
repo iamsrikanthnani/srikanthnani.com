@@ -6,8 +6,7 @@ export const SocialLinks = [
   "https://twitter.com/truly_sn",
   "https://github.com/iamsrikanthnani",
   "https://linkedin.com/in/iamsrikanthnani/",
-  "https://discordapp.com/users/iamsrikanthnani",
   "https://youtube.com/@iamsrikanthnani",
-  `mailto:${ContactEmail}`,
   "https://github.com/iamsrikanthnani/srikanthnani.com",
+  `mailto:${ContactEmail}`,
 ];

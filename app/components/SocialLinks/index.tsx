@@ -26,7 +26,6 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Link from "next/link";
 import {
   CodeIcon,
-  DiscordLogoIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -55,8 +54,6 @@ const Social = () => {
         return <GitHubLogoIcon color="#fff" width={54} height={54} />;
       case url.includes("linkedin"):
         return <LinkedInLogoIcon color="#fff" width={54} height={54} />;
-      case url.includes("discord"):
-        return <DiscordLogoIcon color="#fff" width={54} height={54} />;
       case url.includes("youtube"):
         return <VideoIcon color="#fff" width={54} height={54} />;
       case url.startsWith("mailto:"):

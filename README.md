@@ -1,13 +1,14 @@
-# Full-stack Developer Portfolio
+# Product Engineer Portfolio
 
 [![srikanthnani.com](https://www.srikanthnani.com/site-image.png)](https://srikanthnani.com)
 
 ### [check-demo-here](https://srikanthnani.com)
-This is a full-stack developer portfolio application built with Next.js, TypeScript, framer-motion, and locomotive-scroll.
+
+This is a product engineer portfolio application built with Next.js, TypeScript, framer-motion, and locomotive-scroll.
 
 ## About
 
-This project serves as a portfolio website for showcasing the skills, projects, and experiences of a full-stack developer. It is designed to provide a visually appealing and interactive experience for visitors.
+This project serves as a portfolio website for showcasing the skills, projects, and experiences of a product engineer. It is designed to provide a visually appealing and interactive experience for visitors.
 
 ## Features
 
@@ -51,4 +52,3 @@ For any inquiries or suggestions, feel free to reach out to me at [srikanthnani.
 <a href="https://www.buymeacoffee.com/srikanthnani" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Happy Coding! 🚀
-

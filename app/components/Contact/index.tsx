@@ -39,7 +39,7 @@ const Contact = () => {
       style={{ y }}
       ref={container}
       className={
-        "h-[50vh] flex flex-col bg-[#020202] pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 justify-center items-center"
+        "flex flex-col bg-[#020202] pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 justify-center items-center"
       }
     >
       <div className={"flex flex-col items-center gap-2 justify-center"}>

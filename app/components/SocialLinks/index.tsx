@@ -47,17 +47,31 @@ const Social = () => {
   const getSocialIcon = (url: string) => {
     switch (true) {
       case url.includes("srikanthnani.com"):
-        return <CodeIcon color="#fff" width={54} height={54} />;
+        return <CodeIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />;
       case url.includes("twitter"):
-        return <TwitterLogoIcon color="#fff" width={54} height={54} />;
+        return (
+          <TwitterLogoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />
+        );
       case url.includes("github"):
-        return <GitHubLogoIcon color="#fff" width={54} height={54} />;
+        return (
+          <GitHubLogoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />
+        );
       case url.includes("linkedin"):
-        return <LinkedInLogoIcon color="#fff" width={54} height={54} />;
+        return (
+          <LinkedInLogoIcon
+            color="#fff"
+            className="md:w-12 md:h-12 w-10 h-10"
+          />
+        );
       case url.includes("youtube"):
-        return <VideoIcon color="#fff" width={54} height={54} />;
+        return <VideoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />;
       case url.startsWith("mailto:"):
-        return <EnvelopeClosedIcon color="#fff" width={54} height={54} />;
+        return (
+          <EnvelopeClosedIcon
+            color="#fff"
+            className="md:w-12 md:h-12 w-10 h-10"
+          />
+        );
 
       default:
         // If no matching social media found, return null or handle accordingly
@@ -69,20 +83,20 @@ const Social = () => {
       style={{ y }}
       ref={container}
       className={
-        "h-[50vh] flex flex-col bg-[black] pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 justify-center items-center"
+        "h-[26vh] md:h-[40vh] flex flex-col  w-screen justify-center items-center"
       }
     >
-      <div className={"flex flex-col items-center justify-center"}>
-        <div className="flex items-center mt-8">
-          <div className="flex gap-8 justify-center items-center flex-wrap">
-            {/* Map through SocialLinks array and render respective icons */}
-            {SocialLinks.map((link, index) => (
-              <Link href={link} target="_blank" key={index}>
-                <HoverAnimContainer>{getSocialIcon(link)}</HoverAnimContainer>
-              </Link>
-            ))}
-          </div>
-        </div>
+      <div
+        className={
+          "flex flex-row gap-8 items-center -mt-16 h-full w-full justify-center"
+        }
+      >
+        {/* Map through SocialLinks array and render respective icons */}
+        {SocialLinks.map((link, index) => (
+          <Link href={link} target="_blank" key={index}>
+            <HoverAnimContainer>{getSocialIcon(link)}</HoverAnimContainer>
+          </Link>
+        ))}
       </div>
     </motion.div>
   );

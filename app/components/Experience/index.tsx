@@ -19,7 +19,7 @@ import HoverAnimContainer from "../HoverAnimContainer";
 
 const Experience = () => {
   return (
-    <div className="flex flex-col items-center about-main h-[110vh] w-screen bg-[#121212] px-8 sm:px-8 lg:px-36 py-16">
+    <div className="flex flex-col items-center about-main h-[90vh] w-screen bg-[#121212] px-8 sm:px-8 lg:px-36 py-16">
       <p className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none pb-4">
         Experience👇
       </p>

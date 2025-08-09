@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -10,12 +10,12 @@ const comfortaa = Comfortaa({ subsets: ["latin"] });
 
 // SEO
 export const metadata: Metadata = {
+  metadataBase: new URL("https://srikanthnani.com"),
   title: "Srikanth Nani - Product Engineer 👨‍💻",
   description:
     "Experienced Product Engineer specializing in end-to-end product development with expertise in React Native, ReactJS, NextJS, Node.js, MongoDB, TypeScript, JavaScript, and Python.",
   keywords:
     "Srikanth Nani, Product Engineer, Mobile Developer, Web Developer, Product Development, React Native, ReactJS, Next.js, Node.js, MongoDB, TypeScript, JavaScript, Python",
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   creator: "Srikanth Nani",
   publisher: "Srikanth Nani",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
   appleWebApp: {
     title: "Srikanth Nani Portfolio",
@@ -60,6 +60,11 @@ export const metadata: Metadata = {
   other: {
     "mobile-web-app-capable": "yes",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

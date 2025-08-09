@@ -10,6 +10,7 @@ import {
   Experience,
   Contributions,
 } from "@/components";
+import Products from "./components/Products";
 export default function Home() {
   // // State to track loading status
   // const [isLoading, setIsLoading] = useState(true);
@@ -45,6 +46,8 @@ export default function Home() {
       <Hero />
       {/* About section */}
       <About />
+      {/* Products section */}
+      <Products />
       {/* Skills section */}
       <Skills />
       {/* Contributions section */}

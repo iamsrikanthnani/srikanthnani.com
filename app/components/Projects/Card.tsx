@@ -1,4 +1,3 @@
-"use client";
 import { CardBody, CardContainer, CardItem } from "@/components";
 import { GitHubLogoIcon, OpenInNewWindowIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
@@ -29,7 +28,7 @@ const Card = ({ card, index }: any) => {
               height="1000"
               width="1000"
               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="thumbnail"
+              alt={`Srikanth nani ${card?.name} project`}
             />
           </CardItem>
           {/* Links/buttons section */}
@@ -39,7 +38,7 @@ const Card = ({ card, index }: any) => {
               <CardItem
                 translateZ={20}
                 as="button"
-                className="px-4 py-2 rounded-xl bg-gradient-to-r from-green-600 to-blue-600 text-white text-xs font-bold"
+                className="px-8 py-2 rounded-xl bg-gradient-to-r from-green-600 to-blue-600 text-white text-xs font-bold"
               >
                 <Link href={card?.link} target="_blank">
                   <OpenInNewWindowIcon
@@ -56,7 +55,7 @@ const Card = ({ card, index }: any) => {
               <CardItem
                 translateZ={20}
                 as="button"
-                className="px-4 py-2 rounded-xl bg-gradient-to-r from-green-600 to-blue-600 text-white text-xs font-bold"
+                className="px-8 py-2 rounded-xl bg-gradient-to-r from-green-600 to-blue-600 text-white text-xs font-bold"
               >
                 <Link href={card?.git} target="_blank">
                   <GitHubLogoIcon width={18} height={18} color="#fff" />

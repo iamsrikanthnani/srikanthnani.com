@@ -5,8 +5,8 @@ import GitHubCalendar from "react-github-calendar";
 
 const Contributions = () => {
   return (
-    <div className="flex flex-col about-main w-full bg-[#020202] justify-center items-center px-8 sm:px-8 lg:px-36  mt-[-60px] md:mt-[-120px]">
-      <p className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
+    <div className="flex flex-col about-main w-full bg-[#0a0a0a] justify-center items-center px-8 sm:px-8 lg:px-36  mt-[-60px] md:mt-[-120px]">
+      <p className="place-self-start pt-16 text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
         Github Contributions👇
       </p>
       <div className="flex w-full flex-col items-center gap-5 my-8">

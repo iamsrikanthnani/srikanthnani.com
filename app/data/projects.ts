@@ -1,8 +1,31 @@
 export const ProjectsTitle = "Open Source 🌟";
 export const ProjectsDescription =
-  "Discover my curated collection of open source projects. Explore innovative web and mobile solutions showcasing my passion for development.";
+  "Explore a curated collection of projects I’ve built over the years—spanning web, mobile, AI, and developer tooling. From early experiments to production-ready apps, each project reflects hands-on learning, open-source contributions, and a focus on clean, scalable engineering.";
 export const ProjectsEndText = "More to come! 🎈";
 export const ProjectsList = [
+  {
+    name: "Grok Imagine Art Contest",
+    description:
+      "Grok Imagine Art Contest – a modern Next.js app for uploading AI art, voting with likes, and browsing a fluid infinite-scrolling feed.",
+    git: "https://github.com/iamsrikanthnani/grokimagine.best",
+    link: "https://grokimagine.best/",
+    img: "/img/grokimagine.png",
+  },
+  {
+    name: "MCP boilerplate",
+    description:
+      "A powerful, production-ready MCP server implementing the Model Context Protocol with robust SSE transport, built-in tools.",
+    git: "https://github.com/iamsrikanthnani/mcp-boilerplate",
+    img: "/img/mcp.png",
+  },
+  {
+    name: "Blastar game",
+    description:
+      "A simple space shooter game inspired by the classic arcade games. Blast your way through waves of enemies and achieve the highest score!",
+    link: "https://blastar.srikanthnani.com/",
+    git: "https://github.com/iamsrikanthnani/blastar",
+    img: "/img/blastar.png",
+  },
   {
     name: "Express-trpc-react-turbo starter",
     description:

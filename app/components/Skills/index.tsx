@@ -39,7 +39,7 @@ const Skills = () => {
   const y = useTransform(scrollYProgress, [0, 1], [-250, 0]);
 
   return (
-    <div className="flex bg-black pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 mt-[-180px] mb-16">
+    <div className="flex bg-black pb-[8rem] w-screen px-8 sm:px-8 lg:px-36 pt-8 mt-[0px] mb-16">
       <div className="flex flex-col items-center gap-4 pt-16">
         <p className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
           Skills👇
@@ -51,6 +51,7 @@ const Skills = () => {
               <img
                 src={skill}
                 className="w-20 h-20 sm:w-20 sm:h-20 lg:w-32 lg:h-32"
+                alt={`Srikanth nani ${skill} skill`}
               />
             </HoverAnimContainer>
           ))}

@@ -6,6 +6,14 @@ export const ProductsEndText =
 
 export const ProductsList = [
   {
+    name: "Pluely",
+    description:
+      "The Open Source Alternative to Cluely - A lightning-fast, stealth AI assistant, just ~10MB, privacy-first one-click AI assistant during video calls, real-time debugging in team meetings, and more",
+    link: "https://pluely.com/",
+    img: "https://opengraph.githubassets.com/93030b1c75dfe622b0c2dfa799b17efc273724ec7159edec068fcd07e7ea381e/iamsrikanthnani/pluely",
+    git: "https://github.com/iamsrikanthnani/pluely",
+  },
+  {
     name: "RadialIQ",
     description:
       "Run Instagram ads with Radial in order to find new customers and grow your business. Learn how to use Radial to advertise on Instagram by turning posts into ads, target new audiences",

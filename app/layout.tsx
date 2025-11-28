@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description:
       "Experienced Product Engineer specializing in end-to-end product development with expertise in React Native, ReactJS, NextJS, Node.js, MongoDB, TypeScript, JavaScript, and Python.",
     card: "summary_large_image",
-    creator: "@truly_sn",
+    creator: "@srikanthnani",
     site: "https://srikanthnani.com/",
     images: ["https://srikanthnani.com/site-image.png"],
   },

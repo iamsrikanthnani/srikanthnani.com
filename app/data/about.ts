@@ -3,4 +3,9 @@ export const AboutContent =
 export const AboutQuote =
   "In the realm where design, code, and user interaction converge, I find my home. Each project is a canvas where passion and precision meet, weaving unforgettable digital experiences. Let`s bring your ideas to life and create something extraordinary together.";
 export const GithubUsername = "iamsrikanthnani";
-export const ContributionYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019];
+export const ContributionStartYear = 2019;
+const currentYear = new Date().getFullYear();
+export const ContributionYears = Array.from(
+  { length: currentYear - ContributionStartYear + 1 },
+  (_, i) => currentYear - i
+);

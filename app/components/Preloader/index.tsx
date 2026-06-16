@@ -22,11 +22,11 @@
 
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { opacity, slideUp } from "./anim"; // Import animation variants
 import { languages } from "@/data"; // Import language data
 
-export default function Preloader() {
+export function PreloaderComponent() {
   // State to track current language index and window dimensions
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -46,7 +46,7 @@ export default function Preloader() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 1000 : 150
+      index == 0 ? 1000 : 150,
     );
   }, [index]);
 
@@ -101,5 +101,35 @@ export default function Preloader() {
         </>
       )}
     </motion.div>
+  );
+}
+
+export default function Preloader() {
+  // // State to track loading status
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Effect hook to handle loading animation and scroll behavior
+  useEffect(() => {
+    (async () => {
+      // Asynchronously load LocomotiveScroll library
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+
+      // Simulate loading for 2 seconds
+      setTimeout(() => {
+        // Set loading to false after 2 seconds
+        setIsLoading(false);
+        // Set cursor to default after loading
+        document.body.style.cursor = "default";
+        // Scroll to the top of the page after loading
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []); // Run only once on component mount
+
+  return (
+    <AnimatePresence mode="wait">
+      {isLoading && <PreloaderComponent />}
+    </AnimatePresence>
   );
 }

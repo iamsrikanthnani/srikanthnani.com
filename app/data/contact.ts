@@ -1,7 +1,7 @@
 export const ContactTitle = "Let's collaborate 🚀";
 export const ContactCaption =
   "Reach out for opportunities or just a friendly chat.";
-export const ContactEmail = "srikanthnani1202@gmail.com";
+export const ContactEmail = "mail@srikanthnani.com";
 export const SocialLinks = [
   "https://twitter.com/srikanthnani",
   "https://github.com/iamsrikanthnani",

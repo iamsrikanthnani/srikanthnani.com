@@ -43,12 +43,12 @@ const Contact = () => {
       }
     >
       <div className={"flex flex-col items-center gap-2 justify-center"}>
-        <p
+        <h2
           className="font-bold text-xl sm:text-xl lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
           style={{ textAlign: "center" }}
         >
           {ContactTitle}
-        </p>
+        </h2>
         <p
           className="font-bold text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
           style={{ textAlign: "center" }}

@@ -88,6 +88,8 @@ const Hero = () => {
   // Function to get the corresponding icon for a given social media URL
   const getSocialIcon = (url: string) => {
     switch (true) {
+      case url.startsWith("mailto:"):
+        return <EnvelopeClosedIcon color="#fff" width={24} height={24} />;
       case url.includes("srikanthnani.com"):
         return <CodeIcon color="#fff" width={24} height={24} />;
       case url.includes("twitter"):
@@ -98,8 +100,6 @@ const Hero = () => {
         return <LinkedInLogoIcon color="#fff" width={24} height={24} />;
       case url.includes("youtube"):
         return <VideoIcon color="#fff" width={24} height={24} />;
-      case url.startsWith("mailto:"):
-        return <EnvelopeClosedIcon color="#fff" width={24} height={24} />;
 
       default:
         // If no matching social media found, return null or handle accordingly
@@ -119,20 +119,12 @@ const Hero = () => {
         >
           {HeroTitle1}
         </p>
-        {/* Second text element */}
-        <p
-          className="font-bold text-6xl text- sm:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
+        <h1
+          className="font-bold text-6xl sm:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none"
           style={{ textAlign: "center" }}
         >
           {HeroTitle2}
-        </p>
-        <img
-          alt="srikanthnani visitors badge"
-          className="self-center mt-2"
-          src={
-            "https://visitor-badge.laobi.icu/badge?page_id=iamsrikanthnani.iamsrikanthnani"
-          }
-        />
+        </h1>
         {/* Hero footer with animation */}
         <motion.main variants={slideUp} initial="initial" animate="enter">
           <div style={{ position: "absolute", bottom: 16 }}>

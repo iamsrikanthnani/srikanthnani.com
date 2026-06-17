@@ -46,6 +46,13 @@ const Social = () => {
   // Function to get the corresponding icon for a given social media URL
   const getSocialIcon = (url: string) => {
     switch (true) {
+      case url.startsWith("mailto:"):
+        return (
+          <EnvelopeClosedIcon
+            color="#fff"
+            className="md:w-12 md:h-12 w-10 h-10"
+          />
+        );
       case url.includes("srikanthnani.com"):
         return <CodeIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />;
       case url.includes("twitter"):
@@ -65,13 +72,6 @@ const Social = () => {
         );
       case url.includes("youtube"):
         return <VideoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />;
-      case url.startsWith("mailto:"):
-        return (
-          <EnvelopeClosedIcon
-            color="#fff"
-            className="md:w-12 md:h-12 w-10 h-10"
-          />
-        );
 
       default:
         // If no matching social media found, return null or handle accordingly
@@ -83,7 +83,7 @@ const Social = () => {
       style={{ y }}
       ref={container}
       className={
-        "h-[26vh] md:h-[40vh] flex flex-col  w-screen justify-center items-center"
+        "h-[26vh] md:h-[40vh] flex flex-col bg-[#020202] w-screen justify-center items-center"
       }
     >
       <div

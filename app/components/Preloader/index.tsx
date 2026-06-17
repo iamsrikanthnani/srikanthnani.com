@@ -110,21 +110,14 @@ export default function Preloader() {
 
   // Effect hook to handle loading animation and scroll behavior
   useEffect(() => {
-    (async () => {
-      // Asynchronously load LocomotiveScroll library
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+    // Simulate loading for 2 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
 
-      // Simulate loading for 2 seconds
-      setTimeout(() => {
-        // Set loading to false after 2 seconds
-        setIsLoading(false);
-        // Set cursor to default after loading
-        document.body.style.cursor = "default";
-        // Scroll to the top of the page after loading
-        window.scrollTo(0, 0);
-      }, 2000);
-    })();
+    return () => clearTimeout(timer);
   }, []); // Run only once on component mount
 
   return (

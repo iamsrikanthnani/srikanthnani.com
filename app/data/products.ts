@@ -14,6 +14,14 @@ export const ProductsList = [
     git: "https://github.com/iamsrikanthnani/pluely",
   },
   {
+    name: "HeyNotch",
+    description:
+      "An invisible notch teleprompter that lives inside your screen. They see eye contact. You see your script. Open-source, local-first, for macOS and Windows.",
+    link: "https://heynotch.app/",
+    img: "https://heynotch.app/opengraph-image",
+    git: "https://github.com/iamsrikanthnani/heynotch",
+  },
+  {
     name: "RadialIQ",
     description:
       "Run Instagram ads with Radial in order to find new customers and grow your business. Learn how to use Radial to advertise on Instagram by turning posts into ads, target new audiences",

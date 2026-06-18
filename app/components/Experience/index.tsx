@@ -19,27 +19,35 @@ import HoverAnimContainer from "../HoverAnimContainer";
 
 const Experience = () => {
   return (
-    <div className="flex flex-col items-center about-main h-[90vh] w-screen bg-[#121212] px-8 sm:px-8 lg:px-36 py-16">
-      <p className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none pb-4">
+    <div className="flex flex-col items-center about-main w-screen bg-[#121212] px-8 sm:px-8 lg:px-36 py-16">
+      <h2 className="place-self-start text-md sm:text-md lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none pb-4">
         Experience👇
-      </p>
+      </h2>
 
       {ExperienceList.map((item, index) => (
-        <div className="w-full " key={`skill-${index}`}>
+        <div className="w-full" key={`experience-${index}`}>
           <HoverAnimContainer>
-            <div
-              key={index}
-              className="flex py-12 sm:py-12 md:py-10 px-8 sm:px-8 md:px-16 justify-between"
-            >
-              <p className="text-xl sm:text-xl lg:text-4xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
-                {item?.company}
-              </p>
+            <div className="flex flex-col gap-4 py-8 sm:py-8 md:py-10 px-4 sm:px-8 md:px-16 sm:flex-row sm:items-start sm:justify-between">
+              <div className="flex flex-col gap-1">
+                <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+                  {item?.role}
+                </p>
+                <p className="text-md sm:text-lg lg:text-xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 pointer-events-none">
+                  {item?.company}
+                  <span className="text-neutral-500"> · {item?.type}</span>
+                </p>
+              </div>
 
-              <p className="text-sm sm:text-sm lg:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 pointer-events-none">
-                {item?.exp}
-              </p>
+              <div className="flex flex-col sm:items-end gap-1 shrink-0">
+                <p className="text-sm sm:text-base lg:text-lg text-neutral-300">
+                  {item?.exp}
+                </p>
+                <p className="text-sm sm:text-base text-neutral-500">
+                  {item?.location}
+                </p>
+              </div>
             </div>
-            <hr className=" border-t-[rgba(255,255,255,0.15)]" />
+            <hr className="border-t-[rgba(255,255,255,0.15)]" />
           </HoverAnimContainer>
         </div>
       ))}

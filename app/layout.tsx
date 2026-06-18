@@ -6,7 +6,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SocialLinks, ContactEmail } from "./data/contact";
 import Script from "next/script";
 
-const comfortaa = Comfortaa({ subsets: ["latin"] });
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+  variable: "--font-comfortaa",
+  display: "swap",
+});
 
 // SEO
 export const metadata: Metadata = {
@@ -35,7 +39,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://srikanthnani.com/site-image.png",
-        alt: "Srikanth Nani Portfolio",
+        width: 1506,
+        height: 779,
+        alt: "Srikanth Nani - Product Engineer Portfolio",
       },
     ],
   },
@@ -80,7 +86,7 @@ export default function RootLayout({
   const youtubeUrl = SocialLinks.find((link) => link.includes("youtube")) || "";
 
   return (
-    <html lang="en">
+    <html lang="en" className={comfortaa.variable}>
       <head>
         <Script
           id="structured-data"
@@ -96,6 +102,31 @@ export default function RootLayout({
               email: ContactEmail,
               description:
                 "Experienced Product Engineer specializing in end-to-end product development and delivering user-centric solutions",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Hyderabad",
+                addressRegion: "Telangana",
+                addressCountry: "IN",
+              },
+              knowsAbout: [
+                "React Native",
+                "ReactJS",
+                "Next.js",
+                "Node.js",
+                "TypeScript",
+                "JavaScript",
+                "MongoDB",
+                "Python",
+                "Rust",
+                "Desktop applications",
+                "Product Engineering",
+                "Full Stack Development",
+                "Frontend Development",
+                "Backend Development",
+                "Database Management",
+                "API Development",
+                "AI/ML",
+              ],
               sameAs: [twitterUrl, githubUrl, linkedinUrl, youtubeUrl],
             }),
           }}

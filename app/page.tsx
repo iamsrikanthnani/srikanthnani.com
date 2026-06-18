@@ -9,36 +9,42 @@ import {
   Cursor,
   Experience,
   Contributions,
+  Footer,
 } from "@/components";
 import Products from "./components/Products";
+import { getGithubStats } from "@/lib/github";
 
-export default function Home() {
+export default async function Home() {
+  const stats = await getGithubStats();
+
   // Render the component
   return (
-    <div className="h-screen w-screen">
+    <main className="min-h-screen w-full">
       <Preloader />
       {/* Hero section */}
       <Hero />
       {/* About section */}
       <About />
       {/* Products section */}
-      <Products />
+      <Products starsByRepo={stats.starsByRepo} />
       {/* Skills section */}
       <Skills />
       {/* Contributions section */}
-      <Contributions />
+      <Contributions stats={stats} />
 
       {/* Experience section */}
       <Experience />
 
       {/* Projects section */}
-      <Projects />
+      <Projects starsByRepo={stats.starsByRepo} />
       {/* Social links section */}
       <SocialLinks />
       {/* Contact section */}
       <Contact />
+      {/* Footer */}
+      <Footer />
       {/* cursor */}
       <Cursor />
-    </div>
+    </main>
   );
 }

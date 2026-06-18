@@ -9,6 +9,7 @@ import SocialLinks from "./SocialLinks";
 import HoverAnimContainer from "./HoverAnimContainer";
 import Cursor from "./Cursor";
 import Contributions from "./Contributions";
+import Footer from "./Footer";
 export * from "./AnimCard";
 
 export {
@@ -23,4 +24,5 @@ export {
   SocialLinks,
   Cursor,
   Experience,
+  Footer,
 };

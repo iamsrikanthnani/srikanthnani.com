@@ -1,9 +1,14 @@
 export const languages = [
-  "Hello",
-  "నమస్కరం",
-  "नमस्ते",
-  "Hola",
-  "Ciao",
-  "Bonjour",
-  "Hallo",
+  "Hello", // English
+  "నమస్కారం", // Telugu
+  "नमस्ते", // Hindi
+  "Bonjour", // French
+  "Ciao", // Italian
+  "Olá", // Portuguese
+  "Hallo", // German
+  "こんにちは", // Japanese
+  "안녕하세요", // Korean
+  "你好", // Chinese
+  "Привет", // Russian
+  "Hola", // Spanish
 ];

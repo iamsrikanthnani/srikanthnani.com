@@ -22,7 +22,13 @@
 
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  animate,
+  motion,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
 import { opacity, slideUp } from "./anim"; // Import animation variants
 import { languages } from "@/data"; // Import language data
 
@@ -31,9 +37,16 @@ export function PreloaderComponent() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v));
+  const progress = useTransform(count, (v) => `${v}%`);
+
   // Effect to set initial window dimensions
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
+    const controls = animate(count, 100, { duration: 2.9, ease: "easeInOut" });
+    return () => controls.stop();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Effect to update language index periodically
@@ -41,13 +54,15 @@ export function PreloaderComponent() {
     // Return if reached the end of languages array
     if (index == languages.length - 1) return;
 
-    // Update index after a delay, with a shorter delay after the first language
-    setTimeout(
+    const restStep = Math.floor(2000 / (languages.length - 1));
+    const timer = setTimeout(
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 1000 : 150,
+      index == 0 ? 1000 : restStep,
     );
+
+    return () => clearTimeout(timer);
   }, [index]);
 
   // Define initial and target paths for SVG animation
@@ -98,6 +113,31 @@ export function PreloaderComponent() {
               exit="exit"
             ></motion.path>
           </svg>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="absolute bottom-0 left-0 right-0 z-[2] px-6 sm:px-10 pb-8"
+          >
+            <div className="flex items-end justify-between">
+              <span className="text-sm sm:text-base tracking-wide text-neutral-500">
+                srikanthnani.com
+              </span>
+              <div className="flex items-baseline gap-1">
+                <motion.span className="text-3xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500">
+                  {rounded}
+                </motion.span>
+                <span className="text-xl text-neutral-500">%</span>
+              </div>
+            </div>
+            <div className="mt-4 h-[3px] w-full overflow-hidden rounded-full bg-white/10">
+              <motion.div
+                style={{ width: progress }}
+                className="h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"
+              />
+            </div>
+          </motion.div>
         </>
       )}
     </motion.div>
@@ -110,12 +150,12 @@ export default function Preloader() {
 
   // Effect hook to handle loading animation and scroll behavior
   useEffect(() => {
-    // Simulate loading for 2 seconds
+    // Simulate loading for 3 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []); // Run only once on component mount

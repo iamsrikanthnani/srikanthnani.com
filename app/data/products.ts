@@ -16,7 +16,7 @@ export const ProductsList = [
   {
     name: "HeyNotch",
     description:
-      "An invisible notch teleprompter that lives inside your screen. They see eye contact. You see your script. Open-source, local-first, for macOS and Windows.",
+      "An invisible notch teleprompter that lives inside your screen. They see eye contact. You see your script with Branching Editor. Open-source, local-first, for macOS and Windows.",
     link: "https://heynotch.app/",
     img: "https://heynotch.app/opengraph-image",
     git: "https://github.com/iamsrikanthnani/heynotch",

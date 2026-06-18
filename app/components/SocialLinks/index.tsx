@@ -62,7 +62,7 @@ const Social = () => {
         Find me online
       </p>
 
-      <div className="flex flex-row flex-wrap gap-5 sm:gap-7 items-center justify-center">
+      <div className="grid grid-cols-3 gap-6 justify-items-center sm:flex sm:flex-row sm:flex-wrap sm:gap-7 sm:items-center sm:justify-center">
         {SocialLinks.map((link, index) => {
           const { name, icon } = getSocialMeta(link);
           return (

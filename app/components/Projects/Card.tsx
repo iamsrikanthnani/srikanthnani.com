@@ -16,7 +16,7 @@ const Card = ({ card }: any) => {
       {/* Container for the card */}
       <CardContainer className="inter-var">
         {/* Body of the card */}
-        <CardBody className="bg-black relative group/card hover:shadow-2xl hover:shadow-blue-500/[0.3] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardBody className="bg-black relative group/card hover:shadow-2xl hover:shadow-blue-500/[0.3] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-2xl p-6 border">
           {/* Title */}
           <div className="flex items-start justify-between gap-3">
             <CardItem translateZ="50" className="text-xl font-bold text-white">
@@ -28,7 +28,7 @@ const Card = ({ card }: any) => {
                   href={card?.git || card?.link}
                   target="_blank"
                   aria-label={`${card?.name} GitHub stars`}
-                  className="flex items-center gap-1 rounded-full border border-white/[0.15] bg-white/[0.05] px-2.5 py-1 text-xs font-bold text-yellow-300"
+                  className="flex items-center gap-1 rounded-xl border border-white/[0.15] bg-white/[0.05] px-3 py-1 text-xs font-bold text-yellow-300"
                 >
                   <StarFilledIcon width={13} height={13} />
                   {formatStars(stars)}

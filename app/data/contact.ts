@@ -4,7 +4,7 @@ export const ContactCaption =
 export const ContactBadge = "Always up for a good chat 👋";
 export const ContactEmail = "mail@srikanthnani.com";
 export const SocialLinks = [
-  "https://twitter.com/srikanthnani",
+  "https://x.com/srikanthnani",
   "https://github.com/iamsrikanthnani",
   "https://linkedin.com/in/iamsrikanthnani/",
   "https://youtube.com/@iamsrikanthnani",

@@ -79,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // Extract social profiles from SocialLinks
-  const twitterUrl = SocialLinks.find((link) => link.includes("twitter")) || "";
+  const twitterUrl = SocialLinks.find((link) => link.includes("x.com")) || "";
   const githubUrl = SocialLinks.find((link) => link.includes("github")) || "";
   const linkedinUrl =
     SocialLinks.find((link) => link.includes("linkedin")) || "";

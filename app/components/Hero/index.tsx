@@ -26,9 +26,9 @@ import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  TwitterLogoIcon,
   VideoIcon,
 } from "@radix-ui/react-icons";
+import XIcon from "../icons/XIcon";
 
 const Hero = () => {
   // Function to get the corresponding icon for a given social media URL
@@ -38,8 +38,8 @@ const Hero = () => {
         return <EnvelopeClosedIcon color="#fff" width={24} height={24} />;
       case url.includes("srikanthnani.com"):
         return <CodeIcon color="#fff" width={24} height={24} />;
-      case url.includes("twitter"):
-        return <TwitterLogoIcon color="#fff" width={24} height={24} />;
+      case url.includes("x.com"):
+        return <XIcon color="#fff" width={22} height={22} />;
       case url.includes("github"):
         return <GitHubLogoIcon color="#fff" width={24} height={24} />;
       case url.includes("linkedin"):

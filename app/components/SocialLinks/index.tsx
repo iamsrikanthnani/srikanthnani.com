@@ -18,9 +18,9 @@ import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  TwitterLogoIcon,
   VideoIcon,
 } from "@radix-ui/react-icons";
+import XIcon from "../icons/XIcon";
 import HoverAnimContainer from "../HoverAnimContainer";
 import { SocialLinks } from "@/data";
 
@@ -31,8 +31,8 @@ const getSocialMeta = (url: string) => {
       return { name: "Email", icon: <EnvelopeClosedIcon className={cls} /> };
     case url.includes("srikanthnani.com"):
       return { name: "Source Code", icon: <CodeIcon className={cls} /> };
-    case url.includes("twitter"):
-      return { name: "Twitter / X", icon: <TwitterLogoIcon className={cls} /> };
+    case url.includes("x.com"):
+      return { name: "X", icon: <XIcon className={cls} /> };
     case url.includes("github"):
       return { name: "GitHub", icon: <GitHubLogoIcon className={cls} /> };
     case url.includes("linkedin"):

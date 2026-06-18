@@ -13,9 +13,9 @@ import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  TwitterLogoIcon,
   VideoIcon,
 } from "@radix-ui/react-icons";
+import XIcon from "../icons/XIcon";
 import HoverAnimContainer from "../HoverAnimContainer";
 import { SocialLinks } from "@/data";
 
@@ -28,8 +28,8 @@ const getSocialIcon = (url: string) => {
       return <EnvelopeClosedIcon color="#fff" className={cls} />;
     case url.includes("srikanthnani.com"):
       return <CodeIcon color="#fff" className={cls} />;
-    case url.includes("twitter"):
-      return <TwitterLogoIcon color="#fff" className={cls} />;
+    case url.includes("x.com"):
+      return <XIcon color="#fff" className={cls} />;
     case url.includes("github"):
       return <GitHubLogoIcon color="#fff" className={cls} />;
     case url.includes("linkedin"):

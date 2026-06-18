@@ -1,16 +1,5 @@
 /*
 Social links Component
-- This component represents the contact section of the application.
-- It includes social media links and contact information.
-
-Dependencies:
-- react
-- framer-motion
-- @radix-ui/react-icons (for icons)
-- next/link (for routing)
-
-Props:
-None
 
 Add/change/delete contact:
 ==> data/contact.ts
@@ -35,6 +24,26 @@ import {
 import HoverAnimContainer from "../HoverAnimContainer";
 import { SocialLinks } from "@/data";
 
+const getSocialMeta = (url: string) => {
+  const cls = "w-6 h-6 sm:w-7 sm:h-7";
+  switch (true) {
+    case url.startsWith("mailto:"):
+      return { name: "Email", icon: <EnvelopeClosedIcon className={cls} /> };
+    case url.includes("srikanthnani.com"):
+      return { name: "Source Code", icon: <CodeIcon className={cls} /> };
+    case url.includes("twitter"):
+      return { name: "Twitter / X", icon: <TwitterLogoIcon className={cls} /> };
+    case url.includes("github"):
+      return { name: "GitHub", icon: <GitHubLogoIcon className={cls} /> };
+    case url.includes("linkedin"):
+      return { name: "LinkedIn", icon: <LinkedInLogoIcon className={cls} /> };
+    case url.includes("youtube"):
+      return { name: "YouTube", icon: <VideoIcon className={cls} /> };
+    default:
+      return { name: "", icon: null };
+  }
+};
+
 const Social = () => {
   const container = useRef(null); // Ref for container element
   const { scrollYProgress } = useScroll({
@@ -43,60 +52,48 @@ const Social = () => {
   });
   const y = useTransform(scrollYProgress, [0, 1], [-100, 0]);
 
-  // Function to get the corresponding icon for a given social media URL
-  const getSocialIcon = (url: string) => {
-    switch (true) {
-      case url.startsWith("mailto:"):
-        return (
-          <EnvelopeClosedIcon
-            color="#fff"
-            className="md:w-12 md:h-12 w-10 h-10"
-          />
-        );
-      case url.includes("srikanthnani.com"):
-        return <CodeIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />;
-      case url.includes("twitter"):
-        return (
-          <TwitterLogoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />
-        );
-      case url.includes("github"):
-        return (
-          <GitHubLogoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />
-        );
-      case url.includes("linkedin"):
-        return (
-          <LinkedInLogoIcon
-            color="#fff"
-            className="md:w-12 md:h-12 w-10 h-10"
-          />
-        );
-      case url.includes("youtube"):
-        return <VideoIcon color="#fff" className="md:w-12 md:h-12 w-10 h-10" />;
-
-      default:
-        // If no matching social media found, return null or handle accordingly
-        return null;
-    }
-  };
   return (
     <motion.div
       style={{ y }}
       ref={container}
-      className={
-        "h-[26vh] md:h-[40vh] flex flex-col bg-[#020202] w-screen justify-center items-center"
-      }
+      className="flex flex-col gap-8 bg-[#020202] w-screen justify-center items-center py-20 sm:py-28"
     >
-      <div
-        className={
-          "flex flex-row gap-8 items-center -mt-16 h-full w-full justify-center"
-        }
-      >
-        {/* Map through SocialLinks array and render respective icons */}
-        {SocialLinks.map((link, index) => (
-          <Link href={link} target="_blank" key={index}>
-            <HoverAnimContainer>{getSocialIcon(link)}</HoverAnimContainer>
-          </Link>
-        ))}
+      <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-neutral-500">
+        Find me online
+      </p>
+
+      <div className="flex flex-row flex-wrap gap-5 sm:gap-7 items-center justify-center">
+        {SocialLinks.map((link, index) => {
+          const { name, icon } = getSocialMeta(link);
+          return (
+            <div
+              key={index}
+              className="group relative flex items-center justify-center hover:z-20"
+            >
+              <HoverAnimContainer>
+                <div className="relative inline-flex items-center justify-center">
+                  <div className="pointer-events-none absolute bottom-full left-1/2 mb-3 -translate-x-1/2 scale-90 translate-y-1 opacity-0 transition-all duration-200 ease-out group-hover:scale-100 group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="w-max rounded-lg border border-white/10 bg-[#0d0d0f]/90 px-3 py-1.5 text-center shadow-xl shadow-black/40 backdrop-blur-sm">
+                      <span className="text-xs font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+                        {name}
+                      </span>
+                    </div>
+                    <div className="absolute left-1/2 top-full -mt-1 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-b border-r border-white/10 bg-[#0d0d0f]/90" />
+                  </div>
+
+                  <Link
+                    href={link}
+                    target="_blank"
+                    aria-label={name}
+                    className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.03] text-white transition-all duration-300 group-hover:border-green-400/40 group-hover:bg-white/[0.06] group-hover:text-green-300 group-hover:shadow-lg group-hover:shadow-blue-500/20"
+                  >
+                    {icon}
+                  </Link>
+                </div>
+              </HoverAnimContainer>
+            </div>
+          );
+        })}
       </div>
     </motion.div>
   );

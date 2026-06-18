@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Srikanth Nani - Product Engineer",
+    name: "Srikanth Nani — Senior Product Engineer",
     short_name: "Srikanth Nani",
     description:
-      "Portfolio of Srikanth Nani, a Product Engineer specializing in React Native, ReactJS, Next.js, Node.js, and AI products.",
+      "Senior Product Engineer designing, building and shipping end-to-end products for mobile and web, alongside open-source tools trusted by thousands of developers.",
     start_url: "/",
     display: "standalone",
     background_color: "#000000",

@@ -20,7 +20,7 @@ import HoverAnimContainer from "../HoverAnimContainer";
 import { SocialLinks } from "@/data";
 
 const getSocialIcon = (url: string) => {
-  const cls = "w-6 h-6";
+  const cls = "w-8 h-8";
   switch (true) {
     // Order matters: email + source-repo URLs both contain "srikanthnani.com",
     // so check mailto first, then the site repo, then the github profile.

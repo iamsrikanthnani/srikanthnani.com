@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 // Component for handling hover animations
-const HoverAnimContainer = ({ children }: any) => {
+const HoverAnimContainer = ({ children, className }: any) => {
   // Reference to the container element
   const ref = useRef(null);
   // State for the position of the mouse
@@ -32,6 +32,7 @@ const HoverAnimContainer = ({ children }: any) => {
     // Apply motion to enable animation
     <motion.div
       style={{ position: "relative" }}
+      className={className}
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}

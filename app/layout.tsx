@@ -15,11 +15,11 @@ const comfortaa = Comfortaa({
 // SEO
 export const metadata: Metadata = {
   metadataBase: new URL("https://srikanthnani.com"),
-  title: "Srikanth Nani - Product Engineer 👨‍💻",
+  title: "Srikanth Nani — Senior Product Engineer",
   description:
-    "Experienced Product Engineer specializing in end-to-end product development with expertise in React Native, ReactJS, NextJS, Node.js, MongoDB, TypeScript, JavaScript, and Python.",
+    "Srikanth Nani is a Senior Product Engineer who designs, builds and ships end-to-end products for mobile and web — and open-source tools trusted by thousands of developers worldwide.",
   keywords:
-    "Srikanth Nani, Product Engineer, Mobile Developer, Web Developer, Product Development, React Native, ReactJS, Next.js, Node.js, MongoDB, TypeScript, JavaScript, Python",
+    "Srikanth Nani, srikanthnani, iamsrikanthnani, Srikanth, Nani, Srikanth Nani Product Engineer, Srikanth Nani portfolio, Srikanth Nani developer, srikanthnani.com, Pluely, HeyNotch, Product Engineer, Mobile Developer, Web Developer, Product Development, React Native, ReactJS, Next.js, Node.js, MongoDB, TypeScript, JavaScript, Python, Rust, Hyderabad developer",
   robots: "index, follow",
   creator: "Srikanth Nani",
   publisher: "Srikanth Nani",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://srikanthnani.com" },
   openGraph: {
-    title: "Srikanth Nani - Product Engineer 👨‍💻",
+    title: "Srikanth Nani — Senior Product Engineer",
     description:
-      "Experienced Product Engineer specializing in end-to-end product development with expertise in React Native, ReactJS, NextJS, Node.js, MongoDB, TypeScript, JavaScript, and Python.",
+      "Senior Product Engineer designing, building and shipping end-to-end products for mobile and web, alongside open-source tools trusted by thousands of developers.",
     url: "https://srikanthnani.com/",
     type: "website",
     locale: "en_US",
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     capable: true,
   },
   twitter: {
-    title: `👋 Hello! i am Srikanth Nani`,
+    title: "Srikanth Nani — Senior Product Engineer",
     description:
-      "Experienced Product Engineer specializing in end-to-end product development with expertise in React Native, ReactJS, NextJS, Node.js, MongoDB, TypeScript, JavaScript, and Python.",
+      "Senior Product Engineer designing, building and shipping end-to-end products for mobile and web, alongside open-source tools trusted by thousands of developers.",
     card: "summary_large_image",
     creator: "@srikanthnani",
     site: "https://srikanthnani.com/",
@@ -94,40 +94,69 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Srikanth Nani",
-              url: "https://srikanthnani.com",
-              image: "https://srikanthnani.com/site-image.png",
-              jobTitle: "Product Engineer",
-              email: ContactEmail,
-              description:
-                "Experienced Product Engineer specializing in end-to-end product development and delivering user-centric solutions",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Hyderabad",
-                addressRegion: "Telangana",
-                addressCountry: "IN",
-              },
-              knowsAbout: [
-                "React Native",
-                "ReactJS",
-                "Next.js",
-                "Node.js",
-                "TypeScript",
-                "JavaScript",
-                "MongoDB",
-                "Python",
-                "Rust",
-                "Desktop applications",
-                "Product Engineering",
-                "Full Stack Development",
-                "Frontend Development",
-                "Backend Development",
-                "Database Management",
-                "API Development",
-                "AI/ML",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://srikanthnani.com/#person",
+                  name: "Srikanth Nani",
+                  alternateName: [
+                    "srikanthnani",
+                    "iamsrikanthnani",
+                    "Srikanth Nani",
+                  ],
+                  url: "https://srikanthnani.com",
+                  image: "https://srikanthnani.com/site-image.png",
+                  jobTitle: "Senior Product Engineer",
+                  email: ContactEmail,
+                  description:
+                    "Senior Product Engineer who designs, builds and ships end-to-end products for mobile and web, and open-source tools trusted by thousands of developers worldwide.",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Hyderabad",
+                    addressRegion: "Telangana",
+                    addressCountry: "IN",
+                  },
+                  knowsAbout: [
+                    "Pluely",
+                    "Open Source Developer",
+                    "React Native",
+                    "ReactJS",
+                    "Next.js",
+                    "Node.js",
+                    "TypeScript",
+                    "JavaScript",
+                    "MongoDB",
+                    "Python",
+                    "Rust",
+                    "Desktop applications",
+                    "Product Engineering",
+                    "End-to-End Product Development",
+                    "Frontend Development",
+                    "Backend Development",
+                    "Database Management",
+                    "API Development",
+                    "AI/ML",
+                  ],
+                  sameAs: [twitterUrl, githubUrl, linkedinUrl, youtubeUrl],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://srikanthnani.com/#website",
+                  url: "https://srikanthnani.com",
+                  name: "Srikanth Nani",
+                  alternateName: [
+                    "Srikanth Nani Portfolio",
+                    "iamsrikanthnani",
+                    "srikanthnani.com",
+                    "Srikanth Nani",
+                    "Srikanthnani",
+                  ],
+                  description:
+                    "The portfolio of Srikanth Nani — Senior Product Engineer building open-source tools and end-to-end products for mobile and web.",
+                  publisher: { "@id": "https://srikanthnani.com/#person" },
+                  inLanguage: "en",
+                },
               ],
-              sameAs: [twitterUrl, githubUrl, linkedinUrl, youtubeUrl],
             }),
           }}
         />
